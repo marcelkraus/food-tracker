@@ -10,14 +10,14 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    // MARK: Properties
+    // MARK: - Properties
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
     
-    // MARK: Actions
+    // MARK: - Actions
 
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
         // Hide the keyboard.
@@ -36,7 +36,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
 
     }
 
-    // MARK: Overrides
+    // MARK: - Overrides
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         nameTextField.delegate = self
     }
 
-    // MARK: UITextFieldDelegate
+    // MARK: - UITextFieldDelegate
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Hide the keyboard.
@@ -58,7 +58,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         mealNameLabel.text = textField.text
     }
 
-    // MARK: UIImagePickerControllerDelegate
+    // MARK: - UIImagePickerControllerDelegate
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         // Dismiss the picker if the user canceled.
