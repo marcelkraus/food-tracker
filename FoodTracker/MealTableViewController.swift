@@ -17,7 +17,7 @@ class MealTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Load the sample data
+        // Load the sample data.
         loadSampleMeals()
     }
 
@@ -26,7 +26,7 @@ class MealTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
+    // MARK: - Table View Data Source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -37,14 +37,14 @@ class MealTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Table view cells are reused and should be dequeued using a cell identifier
+        // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "MealTableViewCell"
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? MealTableViewCell  else {
             fatalError("The dequeued cell is not an instance of MealTableViewCell")
         }
 
-        // Fetches the appropriate meal for the data source layout
+        // Fetches the appropriate meal for the data source layout.
         let meal = meals[indexPath.row]
 
         cell.nameLabel.text = meal.name
@@ -103,7 +103,7 @@ class MealTableViewController: UITableViewController {
 
     @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? MealViewController, let meal = sourceViewController.meal {
-            // Add a new meal
+            // Add a new meal.
             let newIndexPath = IndexPath(row: meals.count, section: 0)
             meals.append(meal)
             tableView.insertRows(at: [newIndexPath], with: .automatic)
