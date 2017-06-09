@@ -57,7 +57,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Your Meals" id="QsQ-GD-ciK">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="AGe-gH-2kM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="AGe-gH-2kM">
                             <connections>
                                 <segue destination="tJq-w5-Gyq" kind="presentation" identifier="AddItem" id="IKT-Xv-bO7"/>
                             </connections>
@@ -80,8 +80,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UuB-mY-Qix">
-                                <rect key="frame" x="16" y="104" width="343" height="416"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UuB-mY-Qix">
+                                <rect key="frame" x="16" y="84" width="343" height="410"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aap-hV-Dbz">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -99,8 +99,8 @@
                                             <outletCollection property="gestureRecognizers" destination="6aY-W2-7nS" appends="YES" id="rXi-Xi-YPt"/>
                                         </connections>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fjV-uw-eg5" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="45.5" y="366" width="252" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fjV-uw-eg5" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="45.5" y="366" width="252" height="44"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -116,12 +116,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="Cwd-KF-iex">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="HKj-Vo-mzw">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="HKj-Vo-mzw">
                             <connections>
                                 <action selector="cancel:" destination="BYZ-38-t0r" id="0in-BG-gQj"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="1On-VX-JTK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="1On-VX-JTK">
                             <connections>
                                 <segue destination="Jnw-6Q-x1d" kind="unwind" unwindAction="unwindToMealListWithSender:" id="Acz-5a-32i"/>
                             </connections>
